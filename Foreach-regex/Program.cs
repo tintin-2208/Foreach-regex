@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace @foreach
         {
             //String externer verweiss 
             string bar1 = "12345";
-            string bar2 = "12a45";
+            string bar2 = "12a45678";
             string bar3 = "123456";
 
             //string einlesen
@@ -28,7 +28,7 @@ namespace @foreach
             barcode[6] = "a12345";
 
             //Regex anlegen
-            Regex regex = new Regex("^(123)[0-9]{3}$");
+            Regex regex = new Regex(@"^(123)\d(5)[0-9]{3}$");
 
             //foreach schleife - erst String[](Barcode) in schleife zu String (s) konvertiren
             foreach (string s in barcode)
